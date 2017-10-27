@@ -1,1 +1,5 @@
-<div class="col-md-2"></div>
+<div class="col-md-4" *ngFor="let cake of cakesList">
+    
+     <h3>{{cake.name}}</h3>
+     <p *ngIf="cake.imageUrl">{{cake.imageUrl}}</p>
+</div>

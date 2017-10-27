@@ -6,7 +6,7 @@ import { GetApiService } from '../services/get-api.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: ['./home.component.scss'],
   providers: [
     GetApiService
     ]
