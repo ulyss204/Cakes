@@ -1,0 +1,17 @@
+<form (ngSubmit)="addCake()">
+  <label for="name">Name</label>
+  <input type="text" id="name" [(ngModel)]="cake.name" name="name">
+  <label for="comment">Comment</label>
+  <input type="text" id="comment" [(ngModel)]="cake.comment" name="comment" >
+  <select  [(ngModel)]="cake.yumFactor" name="yumFactor"
+                id="yumFactor">
+    <option value="">Select yumFactor</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    
+  </select>
+  <input type="submit">
+</form>

@@ -14,14 +14,14 @@ export class GetApiService {
 
   }
   createCake(url, body) {
-    return this.http.post(url, body).map((res:Response) => res.json());
+    return this.http.post(url, body).map((res:Response) => res.status);
   }
   deleteCake(url, id) {
-    return this.http.delete(url + id,).map((res:Response) => res.status);
+    return this.http.delete(url + id).map((res:Response) => res.status);
 
   }
   updateCake(url, id, cake) {
-    return this.http.put(url + id, cake).map((res:Response) => res.json());
+    return this.http.put(url + id, cake).map((res:Response) => res.status);
 
   }
 }

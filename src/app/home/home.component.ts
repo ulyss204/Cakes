@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetApiService } from '../services/get-api.service';
-
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 
 @Component({
@@ -15,7 +15,7 @@ import { GetApiService } from '../services/get-api.service';
 export class HomeComponent implements OnInit {
   cakesList: Object;
 
-  constructor(private _getApiService: GetApiService) {
+  constructor(private _getApiService: GetApiService, private router: Router) {
    }
 
   logError(err) {
@@ -31,10 +31,17 @@ export class HomeComponent implements OnInit {
         err => this.logError(err),
         () => {
           console.log(this.cakesList);
+          
         }
     );
   }
-
+  
+  getDetails(id){
+    this.router.navigate(['/home', id]);
+  }
+   addCake(id){
+    this.router.navigate(['/home/selected', id]);
+  }
   ngOnInit() {
     this.getData();
   }

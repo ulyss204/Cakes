@@ -2,20 +2,26 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
-import { CakeComponent } from './cake/cake.component';
+import { FormsModule } from '@angular/forms';
+import { CakeDetailsComponent } from './cake-details/cake-details.component';
+import { CakeChoiceComponent } from './cake-choice/cake-choice.component';
 
 export const routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' }
+  { path: '', component: HomeComponent },
+  { path: ':id',      component: CakeDetailsComponent},
+  { path: 'selected/:id',      component: CakeChoiceComponent},
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    FormsModule
   ],
   declarations: [
     HomeComponent,
-    CakeComponent,
+    CakeDetailsComponent,
+    CakeChoiceComponent
   ]
 })
 export class HomeModule {
