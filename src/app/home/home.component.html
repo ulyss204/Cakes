@@ -1,8 +1,10 @@
-<div class="col-md-4" *ngFor="let cake of cakesList" >
+<div class="col-md-12">
+    <button class="btn btn-primary pull-right wrapper" (click)="addCake(cake.id)">Add a cake</button>
+</div>
+<div class="col-md-4 " *ngFor="let cake of cakesList" >
     
      <h3>{{cake.name}}</h3>
      <p *ngIf="cake.imageUrl">{{cake.imageUrl}}</p>
      <p *ngIf="!cake.imageUrl">Null</p>
-     <button class="btn btn-secondary"(click)="getDetails(cake.id)" >Details</button>
-     <button class="btn btn-primary" (click)="addCake(cake.id)">Select</button>
+     <button class="btn btn-info"(click)="getDetails(cake.id)" >Details</button>
 </div>

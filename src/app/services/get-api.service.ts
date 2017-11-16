@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Cake } from './cake';
 
@@ -14,7 +14,9 @@ export class GetApiService {
 
   }
   createCake(url, body) {
-    return this.http.post(url, body).map((res:Response) => res.status);
+    let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: cpHeaders });
+    return this.http.post(url, body, options).map((res:Response) => res.status);
   }
   deleteCake(url, id) {
     return this.http.delete(url + id).map((res:Response) => res.status);

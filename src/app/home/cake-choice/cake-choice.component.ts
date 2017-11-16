@@ -38,7 +38,6 @@ export class CakeChoiceComponent implements OnInit {
         () => {
           console.log(this.statusCode);
           this.router.navigate(['/home']);
-          console.log(this.cake);
         }
     );
     

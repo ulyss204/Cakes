@@ -1,3 +1,4 @@
-<p>
-  {{cakeDetails.name}}
+<p *ngIf="cakeDetails.comment"> 
+  {{cakeDetails.comment}}
 </p>
+<button class="btn btn-primary" (click)="goToTheList()" >Back to the list</button>

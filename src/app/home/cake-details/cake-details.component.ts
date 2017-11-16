@@ -32,7 +32,9 @@ export class CakeDetailsComponent implements OnInit {
         }
     );
   }
-  
+  goToTheList(){
+    this.router.navigate(['/home']);
+  }
   ngOnInit() {
    let id = this.route.snapshot.paramMap.get('id');
     this.getData(id);
