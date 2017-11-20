@@ -1,4 +1,4 @@
-# A simple app for the PWA Workshop
+# Cake app 
 
 ## Prerequisites
 1. Latest stable versions of `node`, `npm` installed.
