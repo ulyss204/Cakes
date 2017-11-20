@@ -8,8 +8,8 @@ import { CakeChoiceComponent } from './cake-choice/cake-choice.component';
 
 export const routes = [
   { path: '', component: HomeComponent },
-  { path: ':id',      component: CakeDetailsComponent},
-  { path: 'selected/:id',      component: CakeChoiceComponent},
+  { path: 'choice',      component: CakeChoiceComponent},
+  { path: ':id',      component: CakeDetailsComponent}
 ];
 
 @NgModule({

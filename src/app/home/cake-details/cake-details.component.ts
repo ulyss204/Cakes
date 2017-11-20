@@ -13,7 +13,6 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class CakeDetailsComponent implements OnInit {
   cakeDetails: Object;
-  cake$: any;
   constructor(private _getApiService: GetApiService, private router: Router, private route: ActivatedRoute) { }
   
   logError(err) {

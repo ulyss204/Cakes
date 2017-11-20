@@ -39,8 +39,8 @@ export class HomeComponent implements OnInit {
   getDetails(id){
     this.router.navigate(['/home', id]);
   }
-   addCake(id){
-    this.router.navigate(['/home/selected', id]);
+   addCake(){
+    this.router.navigate(['/home/choice']);
   }
   ngOnInit() {
     this.getData();

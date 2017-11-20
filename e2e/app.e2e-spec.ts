@@ -1,10 +1,10 @@
-import { CakesPage } from './app.po';
+import { PwatterPage } from './app.po';
 
-describe('cakes App', () => {
-  let page: CakesPage;
+describe('pwatter App', () => {
+  let page: PwatterPage;
 
   beforeEach(() => {
-    page = new CakesPage();
+    page = new PwatterPage();
   });
 
   it('should display welcome message', () => {
