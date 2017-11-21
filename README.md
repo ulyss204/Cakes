@@ -44,3 +44,9 @@ ng build --prod
 The `dist` folder should be created.
 
 - If you use `http-server`: Run `http-server dist -p 8080` and open `http://127.0.0.1:8080` in your browser.
+
+To create progressive web app
+```bash
+npm run serve-prod-ngsw
+```
+and open `http://127.0.0.1:8080` in your browser.
